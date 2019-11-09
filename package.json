@@ -1,0 +1,23 @@
+{
+  "name": "student-attendance-ms",
+  "version": "1.0.0",
+  "description": "Student Attendance Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarandeep2210/Student-Attendance-MS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarandeep2210/Student-Attendance-MS/issues"
+  },
+  "homepage": "https://github.com/tarandeep2210/Student-Attendance-MS#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
