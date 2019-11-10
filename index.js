@@ -34,9 +34,9 @@ app.get('/students',async (req,res)=>{
 
 app.use('/auth' , auth.router);
 
-console.log(findDistance(12.939888,77.627011,12.939888,77.626975));
+console.log(findDistanceInMeters(12.939888,77.627011,12.939888,77.626975));
 
-function findDistance(lat1, lon1, lat2, lon2) {
+function findDistanceInMeters(lat1, lon1, lat2, lon2) {
 	if ((lat1 == lat2) && (lon1 == lon2)) {
 		return 0;
 	}
