@@ -32,6 +32,29 @@ app.get('/students',async (req,res)=>{
       
 });
 
+
+app.post('/markAttendance', async (req,res) => {
+
+    var class_id= req.body.class_id;
+    var student_id = req.body.student_id;
+
+    con.query('UPDATE attendance set present_flag="1" where student_id = ? and class_id = ?',[student_id,class_id], function (error, results, fields) {
+        if (error) {
+          console.log("error ocurred",error);
+          res.send({
+            "code":400,
+            "failed":"error ocurred"
+          })
+        }else{
+          console.log('The solution is: ', results);
+          res.send({
+            "code":200,
+            "success":"marked attendance sucessfully"
+              });
+        }
+        });
+});
+
 app.use('/auth' , auth.router);
 
 console.log(findDistanceInMeters(12.939888,77.627011,12.939888,77.626975));
